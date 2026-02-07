@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine? 💖</title>
+  <style>
+    body {
+      background: linear-gradient(#ffd6e8, #ffeef6);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 40px;
+      overflow: hidden;
+    }
+    h1 {
+      color: #ff2e7e;
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.5em;
+      color: #ff4f8b;
+    }
+    button {
+      background: #ff69b4;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #ff2e7e;
+    }
+    .flower {
+      position: absolute;
+      font-size: 30px;
+      animation: float 6s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>💗 Will You Be My Valentine? 💗</h1>
+<p>You make my world brighter every single day 🌸</p>
+<p>So I just have one question for you…</p>
+
+<button onclick="alert('YAY!!! 💕🥰 You just made me the happiest person ever!')">
+  YES 💖
+</button>
+
+<script>
+  for (let i = 0; i < 20; i++) {
+    const flower = document.createElement("div");
+    flower.className = "flower";
+    flower.innerHTML = "🌸";
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = (4 + Math.random() * 4) + "s";
+    document.body.appendChild(flower);
+  }
+</script>
+
+</body>
+</html>
